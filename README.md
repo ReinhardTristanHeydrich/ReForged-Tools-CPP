@@ -3,6 +3,9 @@ A tool for runtime modding Elden Ring.
 
 ![github__version](https://img.shields.io/github/v/release/Nordgaren/Erd-Tools-CPP)
 [![GitHub all releases](https://img.shields.io/github/downloads/Nordgaren/Erd-Tools-CPP/total)](https://github.com/Nordgaren/Erd-Tools-CPP/releases/latest)
+
+# Nexus Mods
+My mods will no longer be on Nexus Mods, and I do not give permission to re-upload them. If you mirror my mods to Nexus, I will have them taken down. Nexus is a scummy website that takes andvantage of mod authors, and only enforces their ToS if they feel like it. They make money off the backs of mod authors, but don't have the mod authors backs. I will not support this. 
   
 # WARNING  
 Backup your saves before using this tool, and restore the backups before going online. 
