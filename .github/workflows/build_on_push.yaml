@@ -1,0 +1,35 @@
+name: Build ReForged-Tools-CPP
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Setup NuGet
+      uses: nuget/setup-nuget@v2
+
+    - name: Restore NuGet packages
+      run: nuget restore Erd-Tools-CPP/Erd-Tools-CPP.sln
+
+    - name: Build the project
+      run: msbuild Erd-Tools-CPP/Erd-Tools-CPP.vcxproj /p:Configuration=Release /p:Platform=x64
+
+    - name: Upload DLL artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: erd-tools-dll
+        path: Erd-Tools-CPP/x64/Release/Erd-Tools-CPP.dll
