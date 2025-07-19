@@ -23,7 +23,7 @@ jobs:
       uses: nuget/setup-nuget@v2
 
     - name: Restore NuGet packages
-      run: nuget restore Erd-Tools-CPP/Erd-Tools-CPP.sln
+      run: nuget restore Erd-Tools-CPP.sln
 
     - name: Build the project
       run: msbuild Erd-Tools-CPP/Erd-Tools-CPP.vcxproj /p:Configuration=Release /p:Platform=x64
